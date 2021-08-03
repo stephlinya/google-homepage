@@ -1,0 +1,35 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+nav{
+    width: 100vw;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+}
+nav ul li{
+    display: inline;
+    padding-right: 1em;
+}
+
+.left-align{
+    float: left;
+}
+
+.right-align{
+    float: right;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto; 
+    padding-top: 10em;
+}
