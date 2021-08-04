@@ -6,7 +6,8 @@ html {
 }
 
 nav{
-    width: 100vw;
+    margin: 1em;
+    width: 100%
 }
 
 nav ul {
@@ -27,9 +28,51 @@ nav ul li{
 .right-align{
     float: right;
 }
+.material-icons {
+    float: clear; /* look up where to put float clear */
+    cursor: pointer;
+    padding-right: 0.25em;
+}
 
-#logo {
-    display: block;
+.container {
     margin: 0 auto; 
+    display: flex;
+    flex-flow: column wrap;  
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%; 
+    width: 50%;
+    height: auto; 
+}
+#logo {
     padding-top: 10em;
+}
+
+label {
+    margin: 0.5em; 
+}
+input {
+    padding: 0.5em;
+    border-radius: 1.25em; 
+    border: 1px solid rgb(201, 202, 204);
+    width: 100%;
+}
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+button {
+    margin: 0.5em; 
+    border: none;
+    background-color: rgba(218, 218, 218, 0.2);
+}
+
+footer ul {
+    list-style-type: none;
+
+}
+
+footer ul li {
+    display: inline; 
+    padding-right: 1em;
 }

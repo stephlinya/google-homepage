@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
     <title>Google</title>
 </head>
@@ -13,20 +15,30 @@
         <ul>
             <li class="left-align">About</li>
             <li class="left-align">Store</li>
-            <li class="right-align">Gmail</li>
-            <li class="right-align">Images</li>
-            <li class="right-align">Google Apps</li>
-            <li class="right-align" style="float:right">Google Account</li>
+            <li class="right-align"><span class="material-icons material-icons-round">
+                apps
+                </span></li>
+            <li class="right-align"><span class="material-icons material-icons-round">
+                account_circle
+                </span></li>
+                <li class="right-align">Gmail</li>
+                <li class="right-align">Images</li>
         </ul>
     </nav>
 </header>
 <body>
-    <img id="logo" src="googlelogo_color_272x92dp.png" alt="Google logo">
-    <label for="search-bar"></label>
-    <input type="search" id="search-bar">
+    <div class="container">
+        <img id="logo" src="googlelogo_color_272x92dp.png" alt="Google logo">
+        <label for="search-bar"></label>
+        <input type="search" id="search-bar">
+        <div class="button-container">
+            <button type="submit">Google Search</button>
+            <button type="submit">I'm Feeling Lucky</button>
+        </div>
+        
+    </div>
     
-    <button type="submit">Google Search</button>
-    <button type="submit">I'm Feeling Lucky</button>
+    
 </body>
 
 <footer>
