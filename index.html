@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <title>Google</title>
 </head>
 <header>
@@ -15,10 +15,10 @@
         <ul>
             <li class="left-align"><a href="#">About</a></li>
             <li class="left-align"><a href="#">Store</a></li>
-            <li class="right-align"><span class="material-icons material-icons-round">
+            <li class="right-align"><span class="nav-icon material-icons material-icons-round">
                 apps
                 </span></li>
-            <li class="right-align"><span class="material-icons material-icons-round">
+            <li class="right-align"><span class="nav-icon material-icons material-icons-round">
                 account_circle
                 </span></li>
                 <li class="right-align"><a href="#">Gmail</a></li>
@@ -28,17 +28,26 @@
 </header>
 <body>
     <div class="container">
+        <div class="spacer"></div>
         <img id="logo" src="googlelogo_color_272x92dp.png" alt="Google logo">
-        <label for="search-bar"></label>
-        <input type="search" id="search-bar">
-        <div class="button-container">
-            <button type="submit">Google Search</button>
-            <button type="submit">I'm Feeling Lucky</button>
+        <form><label for="search-bar"></label>
+            <span class="material-icons" id="search-icon">
+                search
+                </span>
+            <input type="search" id="search-bar">
+            <span class="material-icons" id="mic-button">
+                mic
+                </span></form>
+            <div class="button-container">
+                <button class="search-button" type="submit">Google Search</button>
+                <button class="search-button" type="submit">I'm Feeling Lucky</button></form>
+        
         </div>
+
+        <div class="spacer"></div>
         
     </div>
-    
-    
+
 </body>
 
 <footer>
