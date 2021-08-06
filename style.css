@@ -5,7 +5,7 @@ html {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #222;
+    color: rgb(36, 36, 36);
     overflow: hidden;
 }
 
@@ -49,9 +49,8 @@ nav ul li{
     float: right;
 }
 .nav-icons {
-    float: clear; /* look up where to put float clear */
     cursor: pointer;
-    padding-right: 0.25em;
+    padding: 0.5em;
 }
 
 .container {
@@ -73,22 +72,8 @@ label {
     margin: 0.5em; 
 }
 
-/* STYLING WITHOUT ICONS
-input {
-    padding: 0.8em;
-    border-radius: 3em; 
-    border: 1px solid rgb(201, 202, 204);
-    width: 100%;
-    margin-bottom: 2em;
-    
-}
-*/
-
-
-/* STYLING WITH ICONS */ 
-
 form{
-    width: 500px;
+    width: 600px;
     border: 1px solid rgb(201, 202, 204);
     border-radius: 3em; 
     margin: 1em;
@@ -100,7 +85,7 @@ form:hover{
 }
 
 input { 
-    width: 400px;
+    width: 500px;
     padding: 1em;
     border: none;
     background-color: none;
@@ -147,12 +132,7 @@ input:focus{
 .spacer { 
     min-height: 100px; 
 }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+/* Footer as Flex style 
 
 footer ul {
     list-style-type: none;
@@ -165,11 +145,35 @@ footer ul {
     
 }
 
+*/
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color:rgba(218, 218, 218, 0.2);
+    color:lightslategray;
+}
+
+footer ul { 
+    vertical-align: middle; 
+    list-style-type: none;
+}
+.center-align {
+    float: clear;
+    text-align: center;
+}
+
+#flower-icon {
+    color: green;
+}
 footer li {
+    display: inline;
     cursor: pointer;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 footer li:hover{
