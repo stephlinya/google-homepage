@@ -15,15 +15,14 @@ body {
 }
 
 nav{
-    margin: 1.5em;
     width: 100%
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
     padding: 0;
-   
 }
 
 a{
@@ -39,6 +38,7 @@ nav ul li{
     display: inline;
     padding-right: 1em;
     cursor: pointer;
+    
 }
 
 .left-align{
@@ -48,9 +48,9 @@ nav ul li{
 .right-align{
     float: right;
 }
-.nav-icons {
+.nav-icon {
+    display: inline-block;
     cursor: pointer;
-    padding: 0.5em;
 }
 
 .container {
@@ -65,7 +65,8 @@ nav ul li{
 
 
 #logo {
-    padding-top: 10em;
+    padding-top: 15em;
+    padding-bottom: 1.25em;
 }
 
 label {
@@ -104,9 +105,10 @@ input:focus{
 }
 
 #mic-button{
-    display: initial;
     margin-left: 0.5em;
-    color: linear-gradient(0deg blue, red, orange, green);
+    background-image: linear-gradient(180deg, #0000FF, blue, blue,blue,  red, orange, orange, blue, blue);
+    color: transparent;
+    -webkit-background-clip: text;
 }
 
 #mic-button:hover{
@@ -129,24 +131,6 @@ input:focus{
     box-shadow: 1px 1px 1px rgb(201, 202, 204);
     cursor: pointer;
 }
-.spacer { 
-    min-height: 100px; 
-}
-/* Footer as Flex style 
-
-footer ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 100%;
-    justify-content: space-evenly;
-    background-color:rgba(218, 218, 218, 0.2);
-    padding: 0.5em;
-    
-}
-
-*/
-
 
 footer {
     position: absolute;
@@ -160,19 +144,54 @@ footer {
 footer ul { 
     vertical-align: middle; 
     list-style-type: none;
+    padding: 0.5em;
+    margin: 0.5em;
+    height: 100%; 
 }
 .center-align {
-    float: clear;
-    text-align: center;
+  text-align: center;
+  margin: 25%;
 }
+
+@media screen and (max-width: 1200px){
+    .center-align {
+        margin: 10%;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .center-align {
+        margin: 5%;
+    }
+}
+
+
+/* not working lol need to be 2 rows
+@media screen and (max-width: 750px){
+    .center-align {
+        margin: 0 auto;
+        display: block;
+    }
+    nav ul {
+        width: 750px; 
+    }
+    footer li {
+        display: inline-block; 
+        width: 75px; 
+        height: 75px;
+        margin-top: 10px;
+        margin-right: 10px;
+
+    }
+} */
 
 #flower-icon {
     color: green;
+    vertical-align: middle;
 }
 footer li {
     display: inline;
     cursor: pointer;
-    margin: 0.5em;
     padding: 0.5em;
 }
 
