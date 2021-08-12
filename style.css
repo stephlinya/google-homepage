@@ -7,6 +7,7 @@ html {
     font-weight: 400;
     color: rgb(36, 36, 36);
     overflow: hidden;
+    
 }
 
 body { 
@@ -65,7 +66,7 @@ nav ul li{
 
 
 #logo {
-    padding-top: 15em;
+    padding-top: 5em;
     padding-bottom: 1.25em;
 }
 
@@ -74,19 +75,28 @@ label {
 }
 
 form{
-    width: 600px;
+    width: 50%;
+    min-width: 400px;
     border: 1px solid rgb(201, 202, 204);
     border-radius: 3em; 
     margin: 1em;
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width:860px){
+    form {
+        width: 65%;
+    }
+}
+
+
 form:hover{
     box-shadow: 5px 3px 10px 1px rgb(201, 202, 204, 0.5);
 }
 
 input { 
-    width: 500px;
+    width: 100%;
     padding: 1em;
     border: none;
     background-color: none;
@@ -105,7 +115,7 @@ input:focus{
 }
 
 #mic-button{
-    margin-left: 0.5em;
+    margin-right: 1em;
     background-image: linear-gradient(180deg, #0000FF, blue, blue,blue,  red, orange, orange, blue, blue);
     color: transparent;
     -webkit-background-clip: text;
@@ -136,10 +146,12 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    min-width: 500px;
     overflow: hidden;
     background-color:rgba(218, 218, 218, 0.2);
     color:lightslategray;
 }
+
 
 footer ul { 
     vertical-align: middle; 
@@ -153,37 +165,109 @@ footer ul {
   margin: 25%;
 }
 
-@media screen and (max-width: 1200px){
-    .center-align {
-        margin: 10%;
-    }
-}
-
 @media screen and (max-width: 860px){
     .center-align {
         margin: 5%;
+    
     }
 }
 
+@media screen and (min-width:600px) and (max-width: 750px){ 
+    footer {
+        margin: 0;
+        padding: 0;
+    }
+    
+    footer ul {
+        display: flex; 
+        flex-wrap: wrap;
+    }
 
-/* not working lol need to be 2 rows
-@media screen and (max-width: 750px){
-    .center-align {
-        margin: 0 auto;
-        display: block;
-    }
-    nav ul {
-        width: 750px; 
-    }
     footer li {
-        display: inline-block; 
-        width: 75px; 
-        height: 75px;
-        margin-top: 10px;
-        margin-right: 10px;
-
+        flex-basis: auto;
     }
-} */
+    .footer-4{
+        order: 0; 
+        width: 100%; 
+        
+    }
+    .footer-1{ 
+        order: 1;
+        flex: 1;
+        
+    }
+    .footer-2{ 
+        order: 2;
+        flex: 1;
+    }
+    .footer-3{ 
+        order: 3;
+       
+        flex: 1;
+    }
+
+    .footer-5{ 
+        order: 4;
+        flex: 1;
+    }
+    .footer-6{ 
+        order: 5;
+        flex: 1;
+    }
+
+    .footer-7{ 
+        order: 6;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 600px){ 
+    footer {
+        margin: 0;
+        padding: 0;
+    }
+    
+    footer ul {
+        display: flex; 
+        flex-wrap: wrap;
+    }
+
+    .footer-4{
+        order: 0; 
+        width: 100%; 
+        
+    }
+    
+    .footer-1{ 
+        order: 1;
+        flex: 1 1 33%;
+    }
+
+    .footer-2{ 
+        order: 2;
+        flex: 1 1 33%;
+    }
+    .footer-3{ 
+        order: 3;
+        flex: 1 1 33%;
+    }
+
+    .footer-5{ 
+        order: 4;
+        flex: 1 1 33%;
+    }
+    .footer-6{ 
+        order: 5;
+        flex: 1 1 33%;
+    }
+
+    .footer-7{ 
+        order: 6;
+        flex: 1 1 33%;
+    }
+    
+}
+
 
 #flower-icon {
     color: green;
