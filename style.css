@@ -7,12 +7,11 @@ html {
     font-weight: 400;
     color: rgb(36, 36, 36);
     overflow: hidden;
-    
 }
+
 
 body { 
     height: 100%; 
-    min-width: 400px;
 }
 
 nav{
@@ -56,6 +55,7 @@ nav ul li{
 
 .container {
     margin: 0 auto; 
+    padding: 0;
     display: flex;
     flex-flow: column wrap;  
     align-items: center;
@@ -66,7 +66,7 @@ nav ul li{
 
 
 #logo {
-    padding-top: 5em;
+    padding-top: 15%;
     padding-bottom: 1.25em;
 }
 
@@ -145,140 +145,130 @@ input:focus{
 footer {
     position: absolute;
     bottom: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    min-width: 500px;
-    overflow: hidden;
     background-color:rgba(218, 218, 218, 0.2);
     color:lightslategray;
+    box-sizing: border-box;
 }
 
-
 footer ul { 
-    vertical-align: middle; 
     list-style-type: none;
     padding: 0.5em;
     margin: 0.5em;
     height: 100%; 
-}
-.center-align {
-  text-align: center;
-  margin: 25%;
-}
-
-@media screen and (max-width: 860px){
-    .center-align {
-        margin: 5%;
-    
-    }
-}
-
-@media screen and (min-width:600px) and (max-width: 750px){ 
-    footer {
-        margin: 0;
-        padding: 0;
-    }
-    
-    footer ul {
-        display: flex; 
-        flex-wrap: wrap;
-    }
-
-    footer li {
-        flex-basis: auto;
-    }
-    .footer-4{
-        order: 0; 
-        width: 100%; 
-        
-    }
-    .footer-1{ 
-        order: 1;
-        flex: 1;
-        
-    }
-    .footer-2{ 
-        order: 2;
-        flex: 1;
-    }
-    .footer-3{ 
-        order: 3;
-       
-        flex: 1;
-    }
-
-    .footer-5{ 
-        order: 4;
-        flex: 1;
-    }
-    .footer-6{ 
-        order: 5;
-        flex: 1;
-    }
-
-    .footer-7{ 
-        order: 6;
-        flex: 1;
-    }
-}
-
-@media screen and (max-width: 600px){ 
-    footer {
-        margin: 0;
-        padding: 0;
-    }
-    
-    footer ul {
-        display: flex; 
-        flex-wrap: wrap;
-    }
-
-    .footer-4{
-        order: 0; 
-        width: 100%; 
-        
-    }
-    
-    .footer-1{ 
-        order: 1;
-        flex: 1 1 33%;
-    }
-
-    .footer-2{ 
-        order: 2;
-        flex: 1 1 33%;
-    }
-    .footer-3{ 
-        order: 3;
-        flex: 1 1 33%;
-    }
-
-    .footer-5{ 
-        order: 4;
-        flex: 1 1 33%;
-    }
-    .footer-6{ 
-        order: 5;
-        flex: 1 1 33%;
-    }
-
-    .footer-7{ 
-        order: 6;
-        flex: 1 1 33%;
-    }
+    display: grid;
+    grid-template-columns: repeat(3,auto) 2fr repeat(3,auto);
+    grid-template-rows: 2em;
+    justify-items: center;
     
 }
-
 
 #flower-icon {
+    margin: 0;
+    padding: 0;
     color: green;
-    vertical-align: middle;
+    text-align: center;
+    cursor: default;
 }
+
+#flower-icon:hover{
+    cursor: default;
+}
+
 footer li {
-    display: inline;
+    display: inline-flex;
     cursor: pointer;
     padding: 0.5em;
 }
 
 footer li:hover{
     text-decoration: underline;
+}
+
+/*2 row footer style */
+@media screen and (max-width:750px) and (min-width: 500px){
+    footer ul{
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+   .footer-4{
+        order: 0;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .footer-1{
+        order: 1;
+        flex: 1;
+    }
+
+    .footer-2{
+        order: 2;
+        flex: 1;
+    }
+    .footer-3{
+        order: 3;
+        flex: 1;
+    }
+    .footer-5{
+        order: 4;
+        flex: 1;
+    }
+    .footer-6{
+        order: 5;
+        flex: 1;
+    }
+    .footer-7{
+        order: 6;
+        flex: 1;
+    }
+}
+/* 3 row footer style */
+@media screen and (max-width:500px){
+    footer ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+   .footer-4{
+        order: 0;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .footer-1{
+        order: 1;
+        flex: 25%;
+    }
+
+    .footer-2{
+        order: 2;
+        flex: 25%;
+    
+    }
+    .footer-3{
+        order: 3;
+        flex: 25%;
+    
+    }
+    .footer-5{
+        order: 4;
+        flex: 25%;
+    }
+    .footer-6{
+        order: 5;
+        flex: 25%;
+    }
+    .footer-7{
+        order: 6;
+        flex: 25%;
+    }
+
 }
