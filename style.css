@@ -7,11 +7,11 @@ html {
     font-weight: 400;
     color: rgb(36, 36, 36);
     overflow: hidden;
+    
 }
 
-
-body { 
-    height: auto;
+body {
+    height: 100%;
 }
 
 nav{
